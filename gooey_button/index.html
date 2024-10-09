@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="app, landing, corporate, Creative, Html Template, Template">
+    <meta name="author" content="web-themes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title></title>
+
+    <!-- favicon -->
+    <!-- <link href="img/favicon.png" type="image/png" rel="icon"> -->
+
+    <!-- all css here -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+    
+    <div class="button_wrapper">
+         <button type="button">Expandable!</button>
+    </div>
+
+    <script>
+        
+        function moveBg(e) {
+            const rect = e.target.getBoundingClientRect();
+            e.target.style.setProperty('--x', (e.clientX - rect.x) / rect.width * 100);
+            e.target.style.setProperty('--y', (e.clientY - rect.y) / rect.height * 100);
+        }
+        document.querySelector("button").addEventListener('pointermove', moveBg);
+
+    </script>
+</body>
+</html>
